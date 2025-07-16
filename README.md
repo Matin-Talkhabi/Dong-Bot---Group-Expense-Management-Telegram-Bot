@@ -25,7 +25,7 @@ A powerful Telegram bot designed for managing shared expenses in groups. Built w
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd "Blu Dong"
+   cd "Dong"
    ```
 
 2. **Install dependencies**
@@ -164,12 +164,12 @@ The bot uses SQLite with the following tables:
 
 ### Project Structure
 ```
-Blu Dong/
+Dong/
 ├── main.py
 ├── similer.py
 ├── telegram bot/
 │   ├── tel file/
-│   │   ├── dang_bot.db
+│   │   ├── dong_bot.db
 │   │   ├── my.py (main bot file)
 │   │   ├── sq_createor.py (database setup)
 │   │   └── sqlite.txt
