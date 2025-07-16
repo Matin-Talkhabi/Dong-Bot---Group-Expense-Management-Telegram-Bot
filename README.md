@@ -69,9 +69,9 @@ A powerful Telegram bot designed for managing shared expenses in groups. Built w
 ```
 User: /new_dong
 Bot: 📝 نام گروه جدید را وارد کنید:
-User: Trip to Tehran
+User: Trip to Qom
 Bot: ✅ گروه با موفقیت ساخته شد!
-     🏠 Trip to Tehran (DNG_A7B2)
+     🏠 Trip to Qom (DNG_****)
      ──────────────────────────────
 ```
 
@@ -79,7 +79,7 @@ Bot: ✅ گروه با موفقیت ساخته شد!
 ```
 User: /add_expense
 Bot: 📝 عنوان هزینه را وارد کنید:
-User: Hotel
+User: sohan
 Bot: 💰 مبلغ هزینه را وارد کنید (تومان):
 User: 500000
 Bot: 👥 اعضای گروه:
@@ -95,7 +95,7 @@ Bot: 👤 چه کسی هزینه را پرداخت کرده؟
 ### 3. Viewing Financial Status
 ```
 User: /show_status
-Bot: 🏠 Trip to Tehran (DNG_A7B2)
+Bot: 🏠 Trip to Qom (DNG_****)
      ──────────────────────────────
      💰 وضعیت مالی:
 
@@ -165,23 +165,15 @@ The bot uses SQLite with the following tables:
 ### Project Structure
 ```
 Dong/
-├── main.py
-├── similer.py
-├── telegram bot/
-│   ├── tel file/
-│   │   ├── dong_bot.db
-│   │   ├── my.py (main bot file)
-│   │   ├── sq_createor.py (database setup)
-│   │   └── sqlite.txt
-│   └── venv/
+├── dong_bot.db
+├── main.py (main bot file)
 └── README.md
 ```
 
 ### Adding New Features
 
 1. **New Commands**: Add command handlers in the main section
-2. **Database Changes**: Modify schema in `sq_createor.py`
-3. **UI Improvements**: Update message formatting and inline keyboards
+2. **UI Improvements**: Update message formatting and inline keyboards
 
 ## 🤝 Contributing
 
