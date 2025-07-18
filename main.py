@@ -4,6 +4,7 @@ import string
 from collections import defaultdict
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, MessageHandler, filters, ContextTypes
+import os
 
 DB_PATH = "dong_bot.db"
 
@@ -574,7 +575,10 @@ async def step_router(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("❌ دستور نامعتبر! از /help برای راهنما استفاده کنید.")
 
 # ---------- Run Bot ----------
-TOKEN = "YOUR_BOT_TOKEN_HERE"
+# توکن را به صورت امن از متغیر محیطی بخوانید
+TOKEN = os.getenv("BOT_TOKEN")
+if not TOKEN or TOKEN == "YOUR_BOT_TOKEN_HERE":
+    raise ValueError("لطفاً متغیر محیطی BOT_TOKEN را با توکن ربات خود مقداردهی کنید.\nمثال (در ویندوز): set BOT_TOKEN=your_token_here")
 
 if __name__ == "__main__":
     app = Application.builder().token(TOKEN).build()
